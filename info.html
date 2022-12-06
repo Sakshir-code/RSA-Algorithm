@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INFORMATION OF RSA ALGORITHM</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <body >
+            <section class="info-text">
+    
+            <div class="rsa-info">
+                <h1>What is RSA Algorithm</h1>
+                <p>The RSA algorithm is a public-key signature algorithm developed by Ron Rivest, Adi Shamir, and Leonard Adleman.<br> Their paper was first published in 1977, and the algorithm uses logarithmic functions to keep the working complex enough to withstand brute force and streamlined enough to be fast post-deployment.<br> The image below shows it verifies the digital signatures using RSA methodology.<br>
+RSA can also encrypt and decrypt general information to securely exchange data along with handling digital signature verification.<br></p>
+                <h2>Steps in RSA Algorithm</h2>
+                <p>Key Generation
+                    You need to generate public and private keys before running the functions to generate your ciphertext and plaintext. They use certain variables and parameters, all of which are explained below:<br>
+                    
+                    Choose two large prime numbers (p and q)<br>
+                    Calculate n = p*q and z = (p-1)(q-1)<br>
+                    Choose a number e where 1 < e < z<br>
+                    Calculate d = e-1mod(p-1)(q-1)<br>
+                    You can bundle private key pair as (n,d)<br>
+                    You can bundle public key pair as (n,e)<br></p>
+                    <h3>Encryption/Decryption in RSA</h3>
+                    <p>Encryption/Decryption Function
+                        Once you generate the keys, you pass the parameters to the functions that calculate your ciphertext and plaintext using the respective key.
+                        
+                        <br>If the plaintext is m, ciphertext = me mod n.<br>
+                        If the ciphertext is c, plaintext = cd mod n<br>
+                        To understand the above steps better, you can take an example where p = 17 and q=13. Value of e can be 5 as it satisfies the condition 1 < e < (p-1)(q-1).
+                        
+                        <br>N = p * q = 221<br>
+                        
+                        D = e-1mod(p-1)(q-1) = 29<br>
+                        
+                        Public Key pair = (221,5)<br>
+                        
+                        Private Key pair = (221,29)<br>
+                        
+                        If the plaintext(m) value is 10, you can encrypt it using the formula me mod n = 82.<br>
+                        
+                        To decrypt this ciphertext(c) back to original data, you must use the formula cd mod n = 29.<br>
+                        
+                        You can now look at the factors that make the RSA algorithm stand out versus its competitors in the advantages section.<br></p>
+                         <h4>Advantages of RSA</h4>
+                         <P>No Key Sharing: RSA encryption depends on using the receiver’s public key, so you don’t have to share any secret key to receive messages from others.<BR>
+                            Proof of Authenticity: Since the key pairs are related to each other, a receiver can’t intercept the message since they won’t have the correct private key to decrypt the information.<BR>
+                            Faster Encryption: The encryption process is faster than that of the DSA algorithm.<BR>
+                            Data Can’t Be Modified: Data will be tamper-proof in transit since meddling with the data will alter the usage of the keys. And the private key won’t be able to decrypt the information, hence alerting the receiver of manipulation.<BR></P>
+                    </div>
+            </section>
+    
+        </body>
+    </head>
+</html>

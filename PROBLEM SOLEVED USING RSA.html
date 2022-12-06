@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PROBLEM SOLVED</title>
+    <link rel="stylesheet" href="style.css">
+    <section class="rsa-solved">
+        <div class="rsa-solved-ex">
+            <h1>RSA SOLVED EXAMPLE NO 1</h1>
+            <P>Example of RSA Algorithm<BR>
+                Let us take an example of this procedure to learn the concepts. For ease of reading, it can write the example values along with the algorithm steps.
+                
+                <BR>Choose two large prime numbers P and Q<BR>
+                
+                Let P = 47, Q = 17<BR>
+                
+                Calculate N = P x Q<BR>
+                
+                We have, N = 7 x 17 = 119.<BR>
+                
+                <BR>Choose the public key (i.e., the encryption key) E such that it is not an element of (P -1) x (Q – 1)
+                
+                <BR>Let us find (7 - 1) x (17 -1) = 6 x 16 = 96
+                
+                <BR>The factors of 96 are 2, 2, 2, 2, 2, and 3 (because 96 = 2 x 2 x 2 x 2 x 2 x 3).
+                
+                <BR>Therefore, it can select E such that none of the factors of E is 2 and 3. We cannot choose E as 4 (because it has 2 as a factor), 15 (because it has 3 as a factor) and 6 (because it has 2 and 3 both as factors).
+                
+                <BR> Let us choose E as 5 (it can have been any other number that does not its factors as 2 and 3).<BR>
+                
+                Choose the private key (i.e., the decryption key) D including the following equation is true:<BR>
+                
+                (D x E) mod (P – 1) x (Q – 1) = 1<BR>
+                
+                Let us substitute the values of E, P, and Q in the equation.<BR>
+                
+                We have (D x 5) mod (7 – 1) x (17 – 1) = 1.<BR>
+                
+                That is, (D x 5) mod (6) x (16) = 1.<BR>
+                
+                <BR>That is, (D x 5) mod (96) = 1
+                
+                <BR>After some calculations, let us take D = 77. Then the following is true: (77 x 5) mod (96) = 385 mod 96 = 1 which is what we wanted.
+                
+                <BR>For encryption, calculate the cipher text (CT) from the plain text (PT) as follows:<BR>
+                
+                CT = PTE mod N<BR>
+                
+                Let us assume that we want to encrypt plain text 10.<BR> Then, we have
+                
+                CT = 105 mod 119 = 100000 mod 119 = 40.<BR>
+                
+                Send CT as the cipher text to the receiver.<BR>
+                
+                Send 40 as the cipher text to the receiver.<BR>
+                
+                For decryption, calculate the plain text (PT) from the cipher text (CT) as follows:<BR>
+                
+                PT = CTD mod N<BR>
+                
+                It perform the following:<BR>
+                
+                PT = CTDmod N<BR>
+                
+                That is,
+                
+                PT = 4077mod 119 = 10, which was the original plaintext of step5.<BR></P>
+        </div>
+    </section>
+    </head>
+    </html>
